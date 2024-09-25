@@ -160,7 +160,7 @@ nav ul.navbar li a:hover {
 
 /* Achievements Section */
 .achievements {
-    background-color: #0b385f;
+    background: linear-gradient(to bottom, #1c2127,  #0b385f);
     padding: 50px 20px;
 }
 
@@ -172,7 +172,8 @@ nav ul.navbar li a:hover {
 
 .achievements-container {
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
 }
 
@@ -185,6 +186,7 @@ nav ul.navbar li a:hover {
     position: relative; 
     overflow: hidden; 
     transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 1 calc(32% - 20px);
 }
 
 .achievement-card:hover {
@@ -287,6 +289,7 @@ nav ul.navbar li a:hover {
 /* Projects Section */
 .projects {
     background-color: #1c2127;
+    background: linear-gradient(to bottom, #0b385f, #3373b0);
     padding: 50px 20px;
 }
 
@@ -310,6 +313,11 @@ nav ul.navbar li a:hover {
     overflow: hidden;
     width: 300px; /* Atur lebar kartu proyek */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card p {
+    margin-bottom: 20px; /* Gap antara paragraf dan button */
+    text-align: justify; /* Rata kiri kanan */
 }
 
 .project-card:hover {
@@ -351,7 +359,7 @@ nav ul.navbar li a:hover {
 
 /* Skills Section */
 .skills {
-    background-color: #0b385f;
+    background: linear-gradient(to bottom, #3373b0, #1c2127);
     padding: 50px 20px;
 }
 
@@ -363,8 +371,9 @@ nav ul.navbar li a:hover {
 
 .skills-container {
     display: flex;
-    gap: 2rem;
-    justify-content: center;
+    flex-wrap: wrap; /* Agar card turun ke baris baru jika melebihi kapasitas */
+    justify-content: center; /* Memberikan ruang antar card */
+    gap: 20px; /* Jarak antar card */
 }
 
 .skill-card {
@@ -372,15 +381,28 @@ nav ul.navbar li a:hover {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 300px;
+    flex: 0 1 calc(32% - 20px); /* 32% dari lebar kontainer untuk 3 card per baris, disesuaikan dengan gap */
     color: #e7f1fb;
+    width: 300px;
 }
 
 .skill-card .card-image {
     background: url('assets/Skill.jpg') no-repeat center center;
     background-size: cover;
-    height: 150px;
+    height: 200px;
+    width: 370px;
     border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Agar gambar pindah ke baris baru jika sudah penuh */
+    justify-content: left;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.skill-card .card-image img {
+    max-width: 50px; /* Sesuaikan ukuran gambar lebih kecil */
+    max-height: 50px;
+    object-fit: contain; /* Agar gambar tetap sesuai dengan proporsi */
 }
 
 .skill-card .card-content h2 {
@@ -391,6 +413,7 @@ nav ul.navbar li a:hover {
 .skill-card .card-content p {
     font-size: 1rem;
     color: #bed4e9;
+    text-align: justify; /* Rata kiri kanan */
 }
 
 .skill-card:hover {
@@ -429,6 +452,18 @@ nav ul.navbar li a:hover {
     transform: scale(1.05);
 }
 
+.achievements h1, .projects h1, .skills h1, .contact h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ffffff, #99ccff); /* Gradasi warna yang sama dengan nama */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    text-align: center; /* Teks rata tengah */
+}
+
 /* Button Styles */
 .magic-button {
     background-color: #3d8cbf;
@@ -465,6 +500,7 @@ nav ul.navbar li a:hover {
 
 .achievement-card p {
     margin-bottom: 20px; /* Gap antara paragraf dan button */
+    text-align: justify;
 }
 
 .achievement-card .view-doc-button {
