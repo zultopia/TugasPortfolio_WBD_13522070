@@ -5,7 +5,12 @@
     box-sizing: border-box;
 }
 
-/* Gaya dasar untuk body */
+/* Efek scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Default body */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #1c2127;
@@ -52,7 +57,7 @@ nav ul.navbar li a:hover {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 80vh;
     background: linear-gradient(to bottom, #3373b0, #1c2127);
     display: flex;
     justify-content: center;
@@ -77,6 +82,8 @@ nav ul.navbar li a:hover {
     position: relative;
     box-shadow: 0 0px 100px -35px rgba(0,0,0,0.3);
     animation: glow 3s ease-in-out infinite alternate;
+    border: 3px solid transparent; 
+    border-color: #ffffff;
 }
 
 @keyframes glow {
@@ -90,7 +97,7 @@ nav ul.navbar li a:hover {
 
 .hero-text {
     text-align: left;
-    max-width: 700px; /* Perbesar lebar hero text */
+    max-width: 700px; 
 }
 
 .hero-text h1 {
@@ -104,8 +111,8 @@ nav ul.navbar li a:hover {
 }
 
 .hero-text .name {
-    font-size: 3rem; /* Ukuran lebih kecil dari sebelumnya */
-    background: linear-gradient(90deg, #ffffff, #99ccff); /* Gradasi warna lebih terang untuk keterbacaan */
+    font-size: 3rem; 
+    background: linear-gradient(90deg, #ffffff, #99ccff); 
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -262,7 +269,6 @@ nav ul.navbar li a:hover {
     transform: scale(1.2);
 }
 
-/* Menambahkan gambar Touch.svg di bagian get in touch */
 .contact h1::after {
     content: url('assets/Touch.svg');
     display: block;
@@ -311,13 +317,13 @@ nav ul.navbar li a:hover {
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     overflow: hidden;
-    width: 300px; /* Atur lebar kartu proyek */
+    width: 300px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card p {
     margin-bottom: 20px; /* Gap antara paragraf dan button */
-    text-align: justify; /* Rata kiri kanan */
+    text-align: justify; 
 }
 
 .project-card:hover {
@@ -327,14 +333,14 @@ nav ul.navbar li a:hover {
 
 .project-card .card-image {
     width: 100%;
-    height: 200px; /* Sesuaikan tinggi gambar */
+    height: 200px; 
     overflow: hidden;
 }
 
 .project-card .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Agar gambar selalu terisi penuh dalam area */
+    object-fit: cover;
 }
 
 .project-card .card-content {
@@ -371,9 +377,9 @@ nav ul.navbar li a:hover {
 
 .skills-container {
     display: flex;
-    flex-wrap: wrap; /* Agar card turun ke baris baru jika melebihi kapasitas */
-    justify-content: center; /* Memberikan ruang antar card */
-    gap: 20px; /* Jarak antar card */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
 }
 
 .skill-card {
@@ -381,7 +387,7 @@ nav ul.navbar li a:hover {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    flex: 0 1 calc(32% - 20px); /* 32% dari lebar kontainer untuk 3 card per baris, disesuaikan dengan gap */
+    flex: 0 1 calc(32% - 20px); 
     color: #e7f1fb;
     width: 300px;
 }
@@ -393,16 +399,16 @@ nav ul.navbar li a:hover {
     width: 370px;
     border-radius: 10px;
     display: flex;
-    flex-wrap: wrap; /* Agar gambar pindah ke baris baru jika sudah penuh */
+    flex-wrap: wrap;
     justify-content: left;
     padding: 10px 0;
     gap: 10px;
 }
 
 .skill-card .card-image img {
-    max-width: 50px; /* Sesuaikan ukuran gambar lebih kecil */
+    max-width: 50px; 
     max-height: 50px;
-    object-fit: contain; /* Agar gambar tetap sesuai dengan proporsi */
+    object-fit: contain;
 }
 
 .skill-card .card-content h2 {
@@ -413,7 +419,7 @@ nav ul.navbar li a:hover {
 .skill-card .card-content p {
     font-size: 1rem;
     color: #bed4e9;
-    text-align: justify; /* Rata kiri kanan */
+    text-align: justify; 
 }
 
 .skill-card:hover {
@@ -431,21 +437,15 @@ nav ul.navbar li a:hover {
     height: auto;
 }
 
-/* Achievements Section */
-.achievements-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
+/* Section ketiganya */
 .achievement-card, .project-card, .skill-card {
     background-color: #2a3036;
     border-radius: 8px;
-    width: calc(33.33% - 20px); /* 3 cards in a row with margin */
+    width: calc(33.33% - 20px); 
     margin: 10px;
     padding: 15px;
     transition: transform 0.3s;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box; 
 }
 
 .achievement-card:hover, .project-card:hover, .skill-card:hover {
@@ -455,33 +455,15 @@ nav ul.navbar li a:hover {
 .achievements h1, .projects h1, .skills h1, .contact h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    background: linear-gradient(90deg, #ffffff, #99ccff); /* Gradasi warna yang sama dengan nama */
+    background: linear-gradient(90deg, #ffffff, #99ccff); 
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -o-background-clip: text;
     color: transparent;
-    text-align: center; /* Teks rata tengah */
+    text-align: center; 
 }
 
-/* Button Styles */
-.magic-button {
-    background-color: #3d8cbf;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    display: inline-block; /* To center the button */
-}
-
-.magic-button:hover {
-    background-color: #3373b0;
-}
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .achievement-card, .project-card, .skill-card {
         width: calc(50% - 20px); /* 2 cards in a row on smaller screens */
@@ -494,6 +476,23 @@ nav ul.navbar li a:hover {
     }
 }
 
+/* Button Styles */
+.magic-button {
+    background-color: #3d8cbf;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block; 
+}
+
+.magic-button:hover {
+    background-color: #3373b0;
+}
+
 .achievement-card h3 {
     margin-bottom: 10px; /* Gap antara header dan paragraf */
 }
@@ -504,10 +503,10 @@ nav ul.navbar li a:hover {
 }
 
 .achievement-card .view-doc-button {
-    margin-top: auto; /* Letakkan button di bagian bawah card */
-    font-size: 0.9rem; /* Buat button lebih kecil */
-    padding: 8px 16px; /* Ukuran padding button lebih kecil */
-    display: block; /* Agar button full-width */
+    margin-top: auto; 
+    font-size: 0.9rem; 
+    padding: 8px 16px; 
+    display: block;
     text-align: center;
 }
 
@@ -515,19 +514,49 @@ nav ul.navbar li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* Agar tinggi setiap card sama */
+    height: 100%;
 }
 
 .achievement-card img {
-    width: 100px; /* Gambar memenuhi lebar card */
-    height: 100px; /* Proporsi gambar tetap terjaga */
-    object-fit: cover; /* Mengatur agar gambar tetap rapi dalam card */
-    border-radius: 5px; /* Opsional, jika ingin ada border-radius */
+    width: 100px;
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 .project-card img {
-    width: 100px; /* Gambar memenuhi lebar card */
-    height: 150px; /* Tetapkan tinggi seragam untuk semua gambar */
-    object-fit: cover; /* Mengatur agar gambar tetap rapi */
-    border-radius: 5px; /* Opsional */
+    width: 100px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+/* CV */
+.cv-button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff; 
+    border: 3px solid transparent; 
+    border-color: #ffffff;
+    border-radius: 25px; 
+    background: #3373b0; 
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s, border-color 0.3s; 
+    justify-content: left;
+}
+
+.cv-button:hover {
+    background-color: #99ccff; 
+    border-color: #ffffff; /* Ubah warna border saat hover */
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    margin: 20px 0;
+    color: #888;
 }
