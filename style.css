@@ -1,0 +1,497 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya dasar untuk body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1c2127;
+    line-height: 1.6;
+    color: #e7f1fb;
+    padding: 0 20px;
+}
+
+/* Navbar Section */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+nav ul.navbar {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 10px 20px;
+    background-color: #0b385f;
+    border: 2px solid #3373b0;
+    border-radius: 25px;
+}
+
+nav ul.navbar li {
+    display: inline-block;
+}
+
+nav ul.navbar li a {
+    color: #e7f1fb;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul.navbar li a:hover {
+    background-color: #3373b0;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, #3373b0, #1c2127);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #e7f1fb;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 20px;
+}
+
+.hero-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: url('assets/Azul.JPG') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 0px 100px -35px rgba(0,0,0,0.3);
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0px 100px -35px rgba(0,0,0,0.3);
+    }
+    100% {
+        box-shadow: 0 0px 30px 15px rgba(0,179,255, 0.8), 0 0px 80px 30px rgba(0,179,255, 0.4);
+    }
+}
+
+.hero-text {
+    text-align: left;
+    max-width: 700px; /* Perbesar lebar hero text */
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #bed4e9, #005081);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+}
+
+.hero-text .name {
+    font-size: 3rem; /* Ukuran lebih kecil dari sebelumnya */
+    background: linear-gradient(90deg, #ffffff, #99ccff); /* Gradasi warna lebih terang untuk keterbacaan */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    background: linear-gradient(90deg, #ffffff, #99ccff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+}
+
+.hero-text .rotating-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff, #99ccff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+}
+
+@keyframes rotateText {
+    0%, 25% {
+        content: "Informatics Engineering Student";
+    }
+    26%, 50% {
+        content: "Back End Developer";
+    }
+    51%, 75% {
+        content: "UI/UX Designer";
+    }
+    76%, 100% {
+        content: "Data Science Enthusiast";
+    }
+}
+
+/* Deskripsi */
+.description {
+    margin-top: 10px;
+    color: #e0efff;
+    font-size: 1rem; 
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* Achievements Section */
+.achievements {
+    background-color: #0b385f;
+    padding: 50px 20px;
+}
+
+.achievements h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #e7f1fb;
+}
+
+.achievements-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.achievement-card {
+    background: linear-gradient(135deg, #3373b0, #1c2127);
+    padding: 20px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    position: relative; 
+    overflow: hidden; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px) scale(1.05); 
+    box-shadow: 0 10px 30px rgba(0, 179, 255, 0.5); 
+}
+
+.achievement-card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card-image {
+    width: 100px;
+    height: 100px;
+    background: url('https://via.placeholder.com/100') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+
+.card-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #bed4e9;
+}
+
+.card-content p {
+    color: #e7f1fb;
+    font-size: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #1c2127;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 3rem;
+    color: #e7f1fb;
+}
+
+.contact-buttons {
+    margin-top: 20px;
+}
+
+.magic-button {
+    background-color: #0b385f;
+    color: #e7f1fb;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.magic-button:hover {
+    background-color: #3373b0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+/* Menambahkan gambar Touch.svg di bagian get in touch */
+.contact h1::after {
+    content: url('assets/Touch.svg');
+    display: block;
+    margin: 10px auto; 
+    width: 50px; 
+    height: auto; 
+}
+
+.magic-button {
+    background: linear-gradient(90deg, #bed4e9 0%, #3373b0 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.magic-button:hover {
+    background: linear-gradient(90deg, #3373b0 0%, #bed4e9 100%);
+    transition: background 0.3s ease;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #1c2127;
+    padding: 50px 20px;
+}
+
+.projects h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #e7f1fb;
+}
+
+.projects-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #3373b0, #1c2127);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    width: 300px; /* Atur lebar kartu proyek */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Menambahkan efek hover */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.project-card .card-image {
+    width: 100%;
+    height: 200px; /* Sesuaikan tinggi gambar */
+    overflow: hidden;
+}
+
+.project-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar gambar selalu terisi penuh dalam area */
+}
+
+.project-card .card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card .magic-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3373b0;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .magic-button:hover {
+    background-color: #0b385f;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #0b385f;
+    padding: 50px 20px;
+}
+
+.skills h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #e7f1fb;
+}
+
+.skills-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill-card {
+    background: linear-gradient(135deg, #3373b0, #1c2127);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    color: #e7f1fb;
+}
+
+.skill-card .card-image {
+    background: url('assets/Skill.jpg') no-repeat center center;
+    background-size: cover;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.skill-card .card-content h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.skill-card .card-content p {
+    font-size: 1rem;
+    color: #bed4e9;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+/* General Card Styles */
+.card-image {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.card-image img {
+    width: 100%; 
+    height: auto;
+}
+
+/* Achievements Section */
+.achievements-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.achievement-card, .project-card, .skill-card {
+    background-color: #2a3036;
+    border-radius: 8px;
+    width: calc(33.33% - 20px); /* 3 cards in a row with margin */
+    margin: 10px;
+    padding: 15px;
+    transition: transform 0.3s;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.achievement-card:hover, .project-card:hover, .skill-card:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styles */
+.magic-button {
+    background-color: #3d8cbf;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* To center the button */
+}
+
+.magic-button:hover {
+    background-color: #3373b0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .achievement-card, .project-card, .skill-card {
+        width: calc(50% - 20px); /* 2 cards in a row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-card, .project-card, .skill-card {
+        width: 100%; /* 1 card in a row on mobile */
+    }
+}
+
+.achievement-card h3 {
+    margin-bottom: 10px; /* Gap antara header dan paragraf */
+}
+
+.achievement-card p {
+    margin-bottom: 20px; /* Gap antara paragraf dan button */
+}
+
+.achievement-card .view-doc-button {
+    margin-top: auto; /* Letakkan button di bagian bawah card */
+    font-size: 0.9rem; /* Buat button lebih kecil */
+    padding: 8px 16px; /* Ukuran padding button lebih kecil */
+    display: block; /* Agar button full-width */
+    text-align: center;
+}
+
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Agar tinggi setiap card sama */
+}
+
+.achievement-card img {
+    width: 100px; /* Gambar memenuhi lebar card */
+    height: 100px; /* Proporsi gambar tetap terjaga */
+    object-fit: cover; /* Mengatur agar gambar tetap rapi dalam card */
+    border-radius: 5px; /* Opsional, jika ingin ada border-radius */
+}
+
+.project-card img {
+    width: 100px; /* Gambar memenuhi lebar card */
+    height: 150px; /* Tetapkan tinggi seragam untuk semua gambar */
+    object-fit: cover; /* Mengatur agar gambar tetap rapi */
+    border-radius: 5px; /* Opsional */
+}
