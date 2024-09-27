@@ -1,12 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="Figma">
-  <path fill="#0a6fcf" d="M8,24c2.208,0,4-1.792,4-4v-4H8c-2.208,0-4,1.792-4,4C4,22.208,5.792,24,8,24L8,24z" class="color0acf83 svgShape"></path>
-  <path fill="#59aeff" d="M4,12c0-2.208,1.792-4,4-4h4v8H8C5.792,16,4,14.208,4,12L4,12z" class="colora259ff svgShape"></path>
-  <path fill="#1e8bf2" d="M4,4c0-2.208,1.792-4,4-4h4v8H8C5.792,8,4,6.208,4,4L4,4z" class="colorf24e1e svgShape"></path>
-  <path fill="#0961b4" d="M8.419,16H8c-2.208,0-4,1.792-4,4c0,2.208,1.792,4,4,4l0,0c0.142,0,0.281-0.007,0.419-0.022V16L8.419,16z" class="color09b472 svgShape"></path>
-  <path fill="#4d97de" d="M8.419,8H8c-2.208,0-4,1.792-4,4s1.792,4,4,4h0.419V8L8.419,8z" class="color8d4dde svgShape"></path>
-  <path fill="#1a79d3" d="M8.419,0H8C5.792,0,4,1.792,4,4s1.792,4,4,4h0.419V0L8.419,0z" class="colord3441a svgShape"></path>
-  <path fill="#62b2ff" d="M12,0h4c2.208,0,4,1.792,4,4c0,2.208-1.792,4-4,4h-4V0L12,0z" class="colorff7262 svgShape"></path>
-  <path fill="#1a8ffe" d="M20,12c0,2.208-1.792,4-4,4c-2.208,0-4-1.792-4-4c0-2.208,1.792-4,4-4C18.208,8,20,9.792,20,12L20,12z" class="color1abcfe svgShape"></path>
-  <polygon fill="#559bde" points="16 0 12 0 12 8 16 8 16 8 16 8 16 0 16 0" class="colorde6355 svgShape"></polygon>
-  <path fill="#3373b0" d="M16,8L16,8c-2.208,0-4,1.792-4,4c0,2.208,1.792,4,4,4l0,0V8L16,8L16,8z" class="color17a4dd svgShape"></path>
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32" viewBox="0 0 32 32" id="Figma">
+  <path fill="#bed4e9" d="M26,32H6c-3.314,0-6-2.686-6-6V6c0-3.314,2.686-6,6-6h20c3.314,0,6,2.686,6,6v20C32,29.314,29.314,32,26,32z" class="colorfff9dd svgShape"></path>
+  <circle cx="18.667" cy="15.999" r="2.665" fill="#77bdff" class="colorffe777 svgShape"></circle>
+  <path fill="#0082ff" d="M10.666,21.334c0,1.475,1.194,2.666,2.666,2.666s2.666-1.194,2.666-2.666v-8.001h2.669l0.001,0.001c1.472,0,2.666-1.194,2.666-2.666S20.139,8,18.668,8h-5.336c-1.472,0-2.666,1.194-2.666,2.666c0,1.471,1.194,2.666,2.666,2.666c-1.472,0.003-2.666,1.197-2.666,2.669s1.194,2.666,2.666,2.666C11.86,18.666,10.666,19.86,10.666,21.334z" class="colorffd200 svgShape"></path>
 </svg>
