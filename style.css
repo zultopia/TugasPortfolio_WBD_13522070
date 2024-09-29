@@ -517,7 +517,6 @@ nav ul.navbar li a:hover {
 }
 
 .skill-card .card-image {
-    background: url('assets/Skill.jpg') no-repeat center center;
     background-size: cover;
     height: 200px;
     width: 100%;
