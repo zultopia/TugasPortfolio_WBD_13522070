@@ -34,7 +34,7 @@ nav ul.navbar {
     list-style-type: none;
     padding: 10px 20px;
     background-color: #0b385f;
-    border: 2px solid #3373b0;
+    border: 2px solid #e7f1fb;
     border-radius: 25px;
     position: fixed; 
     top: 10px; 
@@ -62,15 +62,15 @@ nav ul.navbar li a:hover {
     border-radius: 20px;
 }
 
-/* Hero Section */
 .hero {
     height: 80vh;
-    background: linear-gradient(to bottom, #3373b0, #1c2127);
+    background: linear-gradient(to bottom, #1c2127, #0b385f);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     color: #e7f1fb;
+    position:relative;
 }
 
 .hero-content {
@@ -159,7 +159,7 @@ nav ul.navbar li a:hover {
 
 /* Achievements Section */
 .achievements {
-    background: linear-gradient(to bottom, #1c2127,  #0b385f);
+    background: linear-gradient(to bottom, #0b385f, #3373b0);
     padding: 50px 20px;
 }
 
@@ -403,7 +403,7 @@ nav ul.navbar li a:hover {
 /* Projects Section */
 .projects {
     background-color: #1c2127;
-    background: linear-gradient(to bottom, #0b385f, #3373b0);
+    background: linear-gradient(to bottom, #3373b0, #0b385f);
     padding: 50px 20px;
 }
 
@@ -485,7 +485,7 @@ nav ul.navbar li a:hover {
 
 /* Skills Section */
 .skills {
-    background: linear-gradient(to bottom, #3373b0, #1c2127);
+    background: linear-gradient(to bottom, #0b385f, #1c2127);
     padding: 50px 20px;
 }
 
@@ -574,18 +574,6 @@ nav ul.navbar li a:hover {
     text-align: center; 
 }
 
-@media (max-width: 768px) {
-    .achievement-card, .project-card, .skill-card {
-        width: calc(50% - 20px); /* 2 cards in a row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .achievement-card, .project-card, .skill-card {
-        width: 100%; /* 1 card in a row on mobile */
-    }
-}
-
 /* CV */
 .cv-button {
     margin-top: 20px;
@@ -619,4 +607,189 @@ nav ul.navbar li a:hover {
     text-align: center;
     margin: 20px 0;
     color: #888;
+}
+
+/* Media Query */
+/* Untuk max-width: 1148px */
+@media (max-width: 1148px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text .name {
+        font-size: 2.7rem;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .achievement-card {
+        flex: 0 1 calc(48% - 20px);
+    }
+}
+
+/* Untuk max-width: 1000px */
+@media (max-width: 1000px) {
+    nav ul.navbar {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-text .name {
+        font-size: 2.5rem;
+    }
+
+    .achievement-card {
+        flex: 0 1 calc(48% - 10px);
+    }
+
+    .achievement-card, .project-card, .skill-card {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Untuk max-width: 900px */
+@media (max-width: 900px) {
+    nav ul.navbar {
+        padding: 8px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text .name {
+        font-size: 2.3rem;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .achievement-card {
+        flex: 0 1 calc(100% - 20px);
+    }
+}
+
+/* Untuk max-width: 600px */
+@media (max-width: 600px) {
+    nav ul.navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero-text .name {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .achievement-card {
+        flex: 0 1 calc(100% - 10px);
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-text p, .cv-button {
+        margin: 0 auto;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .cv-button {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+/* Untuk max-width: 390px */
+@media (max-width: 390px) {
+    nav ul.navbar {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 1rem;
+    }
+
+    .hero-text .name {
+        font-size: 1.8rem;
+    }
+
+    .hero-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .achievement-card, .project-card, .skill-card {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cv-button {
+        display: block;
+        margin: 15px auto;
+    }
+
+    .hero-content {
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .hero-text h1, .hero-text p {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .submit-btn {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .magic-button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 90%;
+        margin: 10px 0;
+    }
 }
