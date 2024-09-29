@@ -16,7 +16,7 @@ body {
     background-color: #1c2127;
     line-height: 1.6;
     color: #e7f1fb;
-    padding: 0 20px;
+    padding: 0 0;
     padding-top: 25px; 
 }
 
@@ -190,6 +190,8 @@ nav ul.navbar li a:hover {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    min-height: 400px; 
+    box-sizing: border-box;
 }
 
 .achievement-card:hover {
@@ -202,15 +204,16 @@ nav ul.navbar li a:hover {
 }
 
 .achievement-card h3 {
-    margin-bottom: 10px; /* Gap antara header dan paragraf */
+    margin-bottom: 10px; 
 }
 
 .achievement-card p {
-    margin-bottom: 20px; /* Gap antara paragraf dan button */
+    margin-bottom: 20px; 
     text-align: justify;
 }
 
 .achievement-card .view-doc-button {
+    margin-bottom: 10px; 
     margin-top: auto; 
     font-size: 0.9rem; 
     padding: 8px 16px; 
@@ -225,7 +228,7 @@ nav ul.navbar li a:hover {
     border-radius: 5px; 
 }
 
-.card-image {
+.achievement-card .card-image {
     width: 100px;
     height: 100px;
     background: url('https://via.placeholder.com/100') no-repeat center center;
@@ -243,6 +246,12 @@ nav ul.navbar li a:hover {
 .card-content p {
     color: #e7f1fb;
     font-size: 1rem;
+}
+
+.achievement-card::after {
+    content: '';
+    display: block;
+    height: 10px; 
 }
 
 /* Contact Section */
@@ -418,15 +427,17 @@ nav ul.navbar li a:hover {
     overflow: hidden;
     width: 300px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card p {
-    margin-bottom: 20px; /* Gap antara paragraf dan button */
+    margin-bottom: 20px; 
     text-align: justify; 
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Menambahkan efek hover */
+    transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
@@ -434,6 +445,7 @@ nav ul.navbar li a:hover {
     width: 100%;
     height: 200px; 
     overflow: hidden;
+    border-radius: 5px; 
 }
 
 .project-card .card-image img {
@@ -445,17 +457,18 @@ nav ul.navbar li a:hover {
 .project-card .card-content {
     padding: 20px;
     text-align: center;
+    flex-grow: 1;
 }
 
 .project-card .magic-button {
     display: inline-block;
-    margin-top: 10px;
     padding: 10px 20px;
     background-color: #3373b0;
     color: #fff;
     border-radius: 25px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .project-card .magic-button:hover {
@@ -497,13 +510,14 @@ nav ul.navbar li a:hover {
     flex: 0 1 calc(32% - 20px); 
     color: #e7f1fb;
     width: 300px;
+    box-sizing: border-box;
 }
 
 .skill-card .card-image {
     background: url('assets/Skill.jpg') no-repeat center center;
     background-size: cover;
     height: 200px;
-    width: 370px;
+    width: 100%;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -531,17 +545,6 @@ nav ul.navbar li a:hover {
 
 .skill-card:hover {
     transform: translateY(-10px);
-}
-
-/* General Card Styles */
-.card-image {
-    overflow: hidden;
-    border-radius: 5px;
-}
-
-.card-image img {
-    width: 100%; 
-    height: auto;
 }
 
 /* Section ketiganya */
