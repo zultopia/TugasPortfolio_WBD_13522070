@@ -1,18 +1,15 @@
-/* Reset margin dan padding untuk semua elemen */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Efek scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Default body */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Roboto Slab", system-ui;
     background-color: #1c2127;
     line-height: 1.6;
     color: #e7f1fb;
@@ -62,6 +59,7 @@ nav ul.navbar li a:hover {
     border-radius: 20px;
 }
 
+/* Hero Section */
 .hero {
     height: 80vh;
     background: linear-gradient(to bottom, #1c2127, #0b385f);
@@ -76,30 +74,32 @@ nav ul.navbar li a:hover {
 .hero-content {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
     padding: 20px;
 }
 
 .hero-image {
-    width: 350px;
-    height: 350px;
+    width: 420px;
+    height: 420px;
     border-radius: 50%;
-    background: url('assets/Azul.JPG') no-repeat center center;
-    background-size: cover;
     position: relative;
-    box-shadow: 0 0px 100px -35px rgba(0,0,0,0.3);
-    animation: glow 3s ease-in-out infinite alternate;
-    border: 3px solid transparent; 
-    border-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0px 30px 15px rgba(0,179,255, 0.8), 0 0px 80px 30px rgba(0,179,255, 0.4);
+    border: 3px solid transparent;
 }
 
-@keyframes glow {
-    0% {
-        box-shadow: 0 0px 100px -35px rgba(0,0,0,0.3);
-    }
-    100% {
-        box-shadow: 0 0px 30px 15px rgba(0,179,255, 0.8), 0 0px 80px 30px rgba(0,179,255, 0.4);
-    }
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.hero-image:hover {
+    box-shadow: 0 0px 30px 15px rgba(0,179,255, 0.8), 0 0px 80px 30px rgba(0,179,255, 0.4);
 }
 
 .hero-text {
@@ -137,7 +137,7 @@ nav ul.navbar li a:hover {
     color: transparent;
 }
 
-.hero-text .descripting-text {
+.hero-text .job-text {
     font-size: 1.5rem;
     font-weight: bold;
     background: linear-gradient(90deg, #ffffff, #99ccff);
@@ -148,7 +148,7 @@ nav ul.navbar li a:hover {
     color: transparent;
 }
 
-/* Deskripsi */
+/* Description */
 .description {
     margin-top: 10px;
     color: #e0efff;
@@ -167,6 +167,8 @@ nav ul.navbar li a:hover {
     font-size: 3rem;
     margin-bottom: 20px;
     color: #e7f1fb;
+    font-weight: 7
+    00;
 }
 
 .achievements-container {
@@ -184,6 +186,7 @@ nav ul.navbar li a:hover {
     text-align: center;
     position: relative; 
     overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
     flex: 0 1 calc(32% - 20px);
     display: flex;
@@ -438,7 +441,7 @@ nav ul.navbar li a:hover {
 
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 179, 255, 0.5); 
 }
 
 .project-card .card-image {
@@ -545,9 +548,10 @@ nav ul.navbar li a:hover {
 
 .skill-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 179, 255, 0.5); 
 }
 
-/* Section ketiganya */
+/* For all section */
 .achievement-card, .project-card, .skill-card {
     background-color: #2a3036;
     border-radius: 8px;
@@ -575,6 +579,12 @@ nav ul.navbar li a:hover {
 }
 
 /* CV */
+.cv-wrapper {
+    display: flex;
+    justify-content: left; 
+    margin-top: 20px;
+}
+
 .cv-button {
     margin-top: 20px;
     display: inline-block;
@@ -584,7 +594,7 @@ nav ul.navbar li a:hover {
     position: relative;
     overflow: hidden;
     transition: background 0.3s, border-color 0.3s; 
-    justify-content: left;
+    justify-content: center;
     background: linear-gradient(90deg, #bed4e9 0%, #3373b0 100%);
     color: white;
     padding: 10px 20px;
@@ -610,8 +620,7 @@ nav ul.navbar li a:hover {
 }
 
 /* Media Query */
-/* Untuk max-width: 1148px */
-@media (max-width: 1148px) {
+@media (max-width: 1200px) {
     .hero-text h1 {
         font-size: 1.8rem;
     }
@@ -624,17 +633,13 @@ nav ul.navbar li a:hover {
         width: 300px;
         height: 300px;
     }
-
-    .achievement-card {
-        flex: 0 1 calc(48% - 20px);
-    }
 }
 
-/* Untuk max-width: 1000px */
 @media (max-width: 1000px) {
     nav ul.navbar {
-        gap: 15px;
-        padding: 10px;
+        gap: 10px;
+        padding: 8px;
+        font-size: 0.9rem; 
     }
 
     .hero-content {
@@ -650,23 +655,37 @@ nav ul.navbar li a:hover {
         font-size: 2.5rem;
     }
 
-    .achievement-card {
-        flex: 0 1 calc(48% - 10px);
+    .skill-card .card-image img {
+        max-width: 40px; 
+        max-height: 40px;
     }
 
     .achievement-card, .project-card, .skill-card {
-        width: calc(50% - 20px);
+        flex: 0 1 calc(48% - 10px); 
+        margin: 10px 0; 
+        box-sizing: border-box;
+    }
+
+    .skills-container, .achievements-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .hero-image {
+        width: 260px;
+        height: 260px;
     }
 }
 
-/* Untuk max-width: 900px */
-@media (max-width: 900px) {
-    nav ul.navbar {
-        padding: 8px;
+@media (max-width: 800px) {
+    .hero-content {
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .hero-text .name {
@@ -674,27 +693,54 @@ nav ul.navbar li a:hover {
     }
 
     .hero-image {
-        width: 250px;
-        height: 250px;
+        width: 225px;
+        height: 225px;
     }
 
-    .achievement-card {
-        flex: 0 1 calc(100% - 20px);
+    .skill-card .card-image img {
+        max-width: 35px; 
+        max-height: 35px;
     }
+
+    .achievement-card, .skill-card {
+        flex: 0 1 calc(48% - 10px);
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+    .skills-container, .achievements-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    nav ul.navbar {
+        gap: 5px; 
+        padding: 5px 10px; 
+        white-space: nowrap; 
+        overflow-x: auto;
+        padding-top: 1px;
+    }
+
+    nav ul.navbar li a {
+        font-size: 10px;
+        padding: 10px; 
+    }
+
+    .magic-button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
 }
 
-/* Untuk max-width: 600px */
 @media (max-width: 600px) {
-    nav ul.navbar {
-        display: none;
-    }
-
-    .hero-text h1 {
-        font-size: 1rem;
-    }
-
     .hero-text .name {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .hero-text .job-text {
+        font-size: 1rem;
     }
 
     .hero-image {
@@ -705,11 +751,18 @@ nav ul.navbar li a:hover {
     .achievement-card, .project-card, .skill-card {
         padding: 10px;
         width: 100%;
+        margin-bottom: 20px; 
+        display: block; 
     }
 
-    .cv-button {
-        display: block;
-        margin: 15px auto;
+    .achievements h1, .projects h1, .skills h1, .contact h1 {
+        font-size: 2rem;
+    }
+
+    .cv-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
 
     .hero-content {
@@ -717,12 +770,18 @@ nav ul.navbar li a:hover {
         align-items: center;
         padding: 20px;
     }
-
-    .hero-text h1, .hero-text p {
-        margin: 0 auto;
+    
+    .hero-text h1 {
         text-align: center;
-        max-width: 90%;
+        font-size: 1.5rem; 
     }
+    
+    .hero-text p {
+        text-align: justify;
+        font-size: 0.8rem;
+        max-width: 90%; 
+        margin: 0 auto; 
+    }    
 
     .submit-btn {
         font-size: 0.9rem;
@@ -737,78 +796,120 @@ nav ul.navbar li a:hover {
         padding: 8px 16px;
     }
 
-    .skills-container {
+    .achievements-container, .projects-container, .skills-container {
         flex-direction: column;
         align-items: center;
     }
 
     .skill-card {
-        width: 90%;
+        width: 90%; 
         margin: 10px 0;
-    }
-}
-
-/* Untuk max-width: 390px */
-@media (max-width: 390px) {
-    nav ul.navbar {
-        display: none;
-    }
-
-    .hero-text h1 {
-        font-size: 1rem;
-    }
-
-    .hero-text .name {
-        font-size: 1.8rem;
-    }
-
-    .hero-image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .achievement-card, .project-card, .skill-card {
-        padding: 10px;
-        width: 100%;
     }
 
     .cv-button {
-        display: block;
-        margin: 15px auto;
+        padding: 8px 16px;
+        font-size: 12px; 
+        border-radius: 40px; 
     }
 
-    .hero-content {
-        text-align: center;
-        align-items: center;
-        padding: 20px;
+    nav ul.navbar {
+        gap: 5px; 
+        padding: 5px 10px; 
+        white-space: nowrap; 
+        overflow-x: auto;
+        padding-top: 1px;
     }
 
-    .hero-text h1, .hero-text p {
-        margin: 0 auto;
-        text-align: center;
-        max-width: 90%;
+    nav ul.navbar li a {
+        font-size: 10px;
+        padding: 5px; 
     }
 
-    .submit-btn {
-        font-size: 0.9rem;
+    .contact-buttons h2 {
+        font-size: 1rem;
+    }
+
+    .card-content h3, .skill-card .card-content h3  {
+        font-size: 1rem;
+    }
+
+    .card-content p, .skill-card .card-content p{
+        font-size: 0.8rem;
+    }
+
+    .contact-form, .contact-buttons {
+        flex: 1;
+        min-width: 100%; 
     }
 
     .contact-form {
-        padding: 20px;
+        background-color: #0b385f;
+        padding: 20px; 
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        transform: translateY(0);
+        opacity: 1;
+        animation: none; 
     }
 
-    .magic-button {
+    .contact-form .form-group {
+        margin-bottom: 15px; 
+    }
+
+    .contact-form label {
+        font-size: 0.9rem; 
+        color: #bed4e9;
+        display: block;
+        margin-bottom: 5px; 
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #3373b0;
+        background-color: #1c2127;
+        color: #e7f1fb;
+        outline: none;
+        font-size: 0.9rem;
+        font-family: 'Poppins', sans-serif;
+        transition: border 0.3s ease;
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+        border: 1px solid #bed4e9;
+        background-color: #2b333e;
+    }
+
+    .submit-btn {
+        width: 100%; 
+        padding: 12px; 
+        background-color: #3373b0;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.9rem; 
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background-color: #bed4e9;
+        color: #1c2127;
+        transform: translateY(-3px);
+    }
+
+    .contact-buttons {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .contact-buttons h2 {
+        font-size: 1rem;
+    }
+
+    .copyright {
         font-size: 0.8rem;
-        padding: 8px 16px;
-    }
-
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill-card {
-        width: 90%;
-        margin: 10px 0;
     }
 }
