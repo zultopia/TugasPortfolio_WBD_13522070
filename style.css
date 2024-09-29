@@ -686,46 +686,65 @@ nav ul.navbar li a:hover {
 /* Untuk max-width: 600px */
 @media (max-width: 600px) {
     nav ul.navbar {
-        flex-direction: column;
-        gap: 10px;
+        display: none;
     }
 
     .hero-text h1 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .hero-text .name {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-image {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
-    .achievement-card {
-        flex: 0 1 calc(100% - 10px);
+    .achievement-card, .project-card, .skill-card {
+        padding: 10px;
+        width: 100%;
     }
 
-    .contact-container {
-        flex-direction: column;
+    .cv-button {
+        display: block;
+        margin: 15px auto;
     }
 
     .hero-content {
         text-align: center;
         align-items: center;
-        justify-content: center;
+        padding: 20px;
     }
 
-    .hero-text p, .cv-button {
+    .hero-text h1, .hero-text p {
         margin: 0 auto;
-        max-width: 100%;
         text-align: center;
+        max-width: 90%;
     }
 
-    .cv-button {
-        display: block;
-        margin: 10px auto;
+    .submit-btn {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .magic-button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 90%;
+        margin: 10px 0;
     }
 }
 
