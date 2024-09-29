@@ -206,7 +206,7 @@ nav ul.navbar li a:hover {
     transform: scale(1.1);
 }
 
-.achievement-card h3 {
+.achievement-card h2 {
     margin-bottom: 10px; 
 }
 
@@ -829,7 +829,7 @@ nav ul.navbar li a:hover {
         font-size: 1rem;
     }
 
-    .card-content h3, .skill-card .card-content h3  {
+    .card-content h2, .skill-card .card-content h2  {
         font-size: 1rem;
     }
 
